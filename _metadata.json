@@ -1,0 +1,67 @@
+{
+  "hash": "179d7e96",
+  "configHash": "886d2c6a",
+  "lockfileHash": "ca73eae7",
+  "browserHash": "3769c94b",
+  "optimized": {
+    "react": {
+      "src": "../../react/index.js",
+      "file": "react.js",
+      "fileHash": "0674f049",
+      "needsInterop": true
+    },
+    "react-dom": {
+      "src": "../../react-dom/index.js",
+      "file": "react-dom.js",
+      "fileHash": "dec4eaf0",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "73e9534b",
+      "needsInterop": true
+    },
+    "react/jsx-runtime": {
+      "src": "../../react/jsx-runtime.js",
+      "file": "react_jsx-runtime.js",
+      "fileHash": "83c56a3a",
+      "needsInterop": true
+    },
+    "@supabase/supabase-js": {
+      "src": "../../@supabase/supabase-js/dist/index.mjs",
+      "file": "@supabase_supabase-js.js",
+      "fileHash": "74ea9ebf",
+      "needsInterop": false
+    },
+    "react-dom/client": {
+      "src": "../../react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6cf647ce",
+      "needsInterop": true
+    },
+    "react-router-dom": {
+      "src": "../../react-router-dom/dist/index.js",
+      "file": "react-router-dom.js",
+      "fileHash": "02ea63b3",
+      "needsInterop": false
+    },
+    "recharts": {
+      "src": "../../recharts/es6/index.js",
+      "file": "recharts.js",
+      "fileHash": "e3efc3ec",
+      "needsInterop": false
+    }
+  },
+  "chunks": {
+    "chunk-PJEEZAML": {
+      "file": "chunk-PJEEZAML.js"
+    },
+    "chunk-DRWLMN53": {
+      "file": "chunk-DRWLMN53.js"
+    },
+    "chunk-G3PMV62Z": {
+      "file": "chunk-G3PMV62Z.js"
+    }
+  }
+}

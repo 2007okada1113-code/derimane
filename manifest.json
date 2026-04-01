@@ -1,0 +1,17 @@
+{
+  "name": "DELIMANE - デリバリー収支管理",
+  "short_name": "DELIMANE",
+  "description": "フードデリバリー配達員向け収支管理アプリ",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F4F8",
+  "theme_color": "#E85D04",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='40' fill='%23E85D04'/><text y='140' x='30' font-size='140' fill='white' font-weight='bold' font-family='sans-serif'>D</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}

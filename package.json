@@ -1,39 +1,61 @@
 {
-  "name": "@babel/types",
-  "version": "7.29.0",
-  "description": "Babel Types is a Lodash-esque utility library for AST nodes",
-  "author": "The Babel Team (https://babel.dev/team)",
-  "homepage": "https://babel.dev/docs/en/next/babel-types",
-  "bugs": "https://github.com/babel/babel/issues?utf8=%E2%9C%93&q=is%3Aissue+label%3A%22pkg%3A%20types%22+is%3Aopen",
-  "license": "MIT",
+  "name": "@eslint/plugin-kit",
+  "version": "0.4.1",
+  "description": "Utilities for building ESLint plugins.",
+  "author": "Nicholas C. Zakas",
+  "type": "module",
+  "main": "dist/esm/index.js",
+  "types": "dist/esm/index.d.ts",
+  "exports": {
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    },
+    "import": {
+      "types": "./dist/esm/index.d.ts",
+      "default": "./dist/esm/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/babel/babel.git",
-    "directory": "packages/babel-types"
+    "url": "git+https://github.com/eslint/rewrite.git",
+    "directory": "packages/plugin-kit"
   },
-  "main": "./lib/index.js",
+  "bugs": {
+    "url": "https://github.com/eslint/rewrite/issues"
+  },
+  "homepage": "https://github.com/eslint/rewrite/tree/main/packages/plugin-kit#readme",
+  "scripts": {
+    "build:dedupe-types": "node ../../tools/dedupe-types.js dist/cjs/index.cjs dist/esm/index.js",
+    "build:cts": "node ../../tools/build-cts.js dist/esm/index.d.ts dist/cjs/index.d.cts",
+    "build": "rollup -c && npm run build:dedupe-types && tsc -p tsconfig.esm.json && npm run build:cts",
+    "pretest": "npm run build",
+    "test": "mocha \"tests/**/*.test.js\"",
+    "test:coverage": "c8 npm test",
+    "test:jsr": "npx jsr@latest publish --dry-run",
+    "test:types": "tsc -p tests/types/tsconfig.json"
+  },
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin"
+  ],
+  "license": "Apache-2.0",
   "dependencies": {
-    "@babel/helper-string-parser": "^7.27.1",
-    "@babel/helper-validator-identifier": "^7.28.5"
+    "@eslint/core": "^0.17.0",
+    "levn": "^0.4.1"
   },
   "devDependencies": {
-    "@babel/generator": "^7.29.0",
-    "@babel/helper-fixtures": "^7.28.6",
-    "@babel/parser": "^7.29.0"
+    "@types/levn": "^0.4.0",
+    "rollup-plugin-copy": "^3.5.0"
   },
   "engines": {
-    "node": ">=6.9.0"
-  },
-  "type": "commonjs",
-  "types": "./lib/index-legacy.d.ts",
-  "typesVersions": {
-    ">=4.1": {
-      "lib/index-legacy.d.ts": [
-        "lib/index.d.ts"
-      ]
-    }
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0"
   }
 }
